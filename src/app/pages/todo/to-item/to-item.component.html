@@ -1,0 +1,7 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md">
+   <p [ngStyle]="{textDecoration: done ? 'line-through' : 'none'}">
+    {{ todo.title }}
+   </p>
+    <button type="button" class="btn btn-outline-success float-end" (click)="markAsDone()">Done</button>
+   <button type="button" class="btn btn-outline-danger float-end" (click)="removeTodo()" float-end>Excluir</button>
+  </div>

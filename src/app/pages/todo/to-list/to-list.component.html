@@ -1,0 +1,16 @@
+<section class="wrapper">
+    <div class="card w-100 my-5">
+        <div class="card-body">
+            <h1 class="card-title text-start">Lista de Tarefas</h1>
+            <form>
+                <input type="text" #todo class="form-control" placeholder="Digite sua tarefa" (keyup.enter)="addTodo(todo.value); todo.value = '' " >
+                <label for="gloatingInput">Tarefas:</label>
+            </form>
+            <ul class="list-group">
+                <tr *ngFor="let todo of todos;">
+                    <app-to-item [todo]="todo" (remove)="removeTodo($event)"></app-to-item>
+                </tr>
+            </ul>       
+        </div>
+    </div>
+</section>
